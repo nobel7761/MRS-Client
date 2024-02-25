@@ -40,7 +40,7 @@ const MainNavbar = () => {
   }, [router.pathname]);
 
   return (
-    <div className="w-[80%] mx-auto bg-white px-[3rem] py-5 rounded-full overflow-hidden flex justify-between items-center gap-x-[10%]">
+    <div className="w-[60%] mx-auto bg-white px-[3rem] py-5 rounded-full overflow-hidden flex justify-between items-center gap-x-[10%]">
       <BrandLogo className="w-[25%] transform hover:scale-125 transition-transform duration-300" />
       <nav className="w-[65%] flex justify-between pr-10">
         {navbarItems.map((item, index) => (

@@ -8,43 +8,43 @@ import { space_grotest } from "@/fonts";
 
 const Navbar = () => {
   return (
-    <div>
+    <div className="mt-8 z-10">
       <div
-        className="w-[73%] mx-auto px-[5rem] pt-4 pb-3 rounded-tl-full rounded-tr-full overflow-hidden"
+        className="w-[53%] mx-auto  py-2 px-16 rounded-tl-full rounded-tr-full overflow-hidden"
         style={{
           background: "linear-gradient( 90deg, #5956f0 0%, #ff50b8 100%)",
         }}
       >
-        <div className="text-white text-xl font-bold flex justify-between items-center">
+        <div className="text-white text-sm font-bold flex justify-between items-center">
           <div className="w-1/2 flex items-center gap-x-2">
             <FaPhoneAlt />
-            <div className="text-base flex gap-x-2 items-center">
+            <div className=" flex gap-x-2 items-center">
               <p className={`${space_grotest.className}`}>Call Now</p>
               <p>01701228430</p>
             </div>
           </div>
 
-          <div className="w-1/5 flex gap-x-10">
+          <div className="w-1/5 flex gap-x-10 items-center">
             <Link
               href="https://wa.me/+8801701228430"
               target="_blank"
               className="w-fit"
             >
-              <IoLogoWhatsapp className="hover:text-whatsapp text-2xl" />
+              <IoLogoWhatsapp className="hover:text-whatsapp text-lg" />
             </Link>
             <Link
               href="https://www.facebook.com/profile.php?id=100078968657675"
               target="_blank"
               className="w-fit"
             >
-              <BsFacebook className="hover:text-facebook text-2xl" />
+              <BsFacebook className="hover:text-facebook text-lg" />
             </Link>
             <Link
               href="mailto:manpowersync@gmail.com"
               target="_blank"
               className="w-fit"
             >
-              <MdEmail className="hover:text-black text-2xl" />
+              <MdEmail className="hover:text-black text-lg" />
             </Link>
           </div>
         </div>

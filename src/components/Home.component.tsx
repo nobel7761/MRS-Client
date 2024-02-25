@@ -1,13 +1,13 @@
-import Navbar from "./shared/Navbar";
+import TopCover from "./shared/TopCover.component";
 
 const HomeComponent = () => {
   return (
-    <div
-      className="bg-cover bg-center h-[75rem]"
-      style={{ backgroundImage: 'url("/banner-background.jpg")' }}
-    >
-      <Navbar />
-    </div>
+    <>
+      <TopCover height="h-[75rem]" imageUrl="/banner-background.jpg">
+        <h1 className="text-white ">hello bangladesh</h1>
+      </TopCover>
+      <h2>this is check</h2>
+    </>
   );
 };
 
