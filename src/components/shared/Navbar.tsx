@@ -10,7 +10,7 @@ const Navbar = () => {
   return (
     <div>
       <div
-        className="w-[63%] mx-auto px-[5rem] pt-4 pb-3 rounded-tl-full rounded-tr-full overflow-hidden"
+        className="w-[73%] mx-auto px-[5rem] pt-4 pb-3 rounded-tl-full rounded-tr-full overflow-hidden"
         style={{
           background: "linear-gradient( 90deg, #5956f0 0%, #ff50b8 100%)",
         }}
