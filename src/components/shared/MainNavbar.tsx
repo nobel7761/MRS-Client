@@ -41,7 +41,11 @@ const MainNavbar = () => {
 
   return (
     <div className="max-w-[82.5%] mx-auto bg-white px-[3rem] py-5 rounded-full overflow-hidden flex justify-between items-center gap-x-[10%]">
-      <BrandLogo className="w-[25%] transform hover:scale-125 transition-transform duration-300" />
+      <Link href="/" className="w-[25%]">
+        <BrandLogo className="transform hover:scale-125 transition-transform duration-300" />
+      </Link>
+
+      {/* <BrandLogo className="w-[25%] transform hover:scale-125 transition-transform duration-300" /> */}
       <nav className="w-[65%] flex justify-between pr-10">
         {navbarItems.map((item, index) => (
           <Link
