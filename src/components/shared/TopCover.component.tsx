@@ -4,7 +4,7 @@ import { ReactElement } from "react";
 import { RiArrowRightDoubleLine } from "react-icons/ri";
 
 const TopCover = ({
-  height = "h-[45rem]",
+  height,
   imageUrl,
   title,
   children,
@@ -41,7 +41,7 @@ const TopCover = ({
           </div>
         </div>
       ) : (
-        children
+        <div className="py-10">{children}</div>
       )}
     </div>
   );

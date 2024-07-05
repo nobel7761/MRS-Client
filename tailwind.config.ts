@@ -11,6 +11,8 @@ const config: Config = {
       colors: {
         facebook: "#2176FF",
         whatsapp: "#46EE65",
+        primary: "#2663EB",
+        secondary: "",
       },
     },
   },

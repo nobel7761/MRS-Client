@@ -12,7 +12,7 @@ const Navbar = () => {
       <div
         className="w-[65%] mx-auto  py-2 pl-10 rounded-tl-full rounded-tr-full overflow-hidden"
         style={{
-          background: "linear-gradient( 90deg, #5956f0 0%, #ff50b8 100%)",
+          background: "linear-gradient( 90deg, #2663EB 0%, #ff50b8 100%)",
         }}
       >
         <div className="text-white text-sm font-bold flex justify-between items-center">

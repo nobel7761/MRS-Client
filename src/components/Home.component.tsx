@@ -8,12 +8,15 @@ import HeroImage1 from "../../public/griddle.jpeg";
 import HeroImage2 from "../../public/GoongTheCastle.jpeg";
 import HeroImage3 from "../../public/MRS-old-logo-removebg-preview.png";
 import HeroImage4 from "../../public/MRS-old-logo.png";
+import CounterSection from "./Home/CounterSection";
+import Intro from "./Home/Intro/Intro";
+import Clients from "./Home/Clients/Clients";
 
 const HomeComponent = () => {
   return (
-    <>
-      <TopCover height="h-[75rem]" imageUrl="/banner-background.jpg">
-        <CustomContainer>
+    <div className="">
+      <TopCover height="h-screen" imageUrl="/banner-background.jpg">
+        {/* <CustomContainer>
           <>
             <div className="flex">
               <div
@@ -30,7 +33,6 @@ const HomeComponent = () => {
               </div>
 
               <div className={`w-[60%] relative`}>
-                {/* hero1  */}
                 <div className="w-[70%] top-0 rounded-3xl bg-gradient-to-r from-[#5956f0] to-[#ff50b8]">
                   <Image
                     src={HeroImage1}
@@ -41,7 +43,6 @@ const HomeComponent = () => {
                   />
                 </div>
 
-                {/* hero2 */}
                 <div className="absolute top-32 flex justify-end">
                   <div className="w-[50%] rounded-3xl bg-gradient-to-r from-[#5956f0] to-[#ff50b8] overflow-hidden ">
                     <Image
@@ -60,10 +61,13 @@ const HomeComponent = () => {
               </div>
             </div>
           </>
-        </CustomContainer>
+        </CustomContainer> */}
       </TopCover>
-      <h2>this is check</h2>
-    </>
+      <Intro />
+      <CounterSection />
+      <Clients />
+      <h1>hello bangladesh</h1>
+    </div>
   );
 };
 
