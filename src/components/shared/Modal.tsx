@@ -41,7 +41,7 @@ const Modal = ({
               leaveTo="opacity-0 scale-95"
             >
               <Dialog.Panel
-                className={`${maxWidth} w-full transform rounded-2xl bg-white p-6 align-middle shadow-xl transition-all`}
+                className={`${maxWidth} w-full  transform rounded-2xl bg-white p-6 align-middle shadow-xl transition-all`}
               >
                 <button
                   type="button"

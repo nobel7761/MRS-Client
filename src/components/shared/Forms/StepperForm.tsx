@@ -1,0 +1,98 @@
+"use client";
+
+import React, { useEffect, useState } from "react";
+import { Button, message, Steps } from "antd";
+import { FormProvider, useForm } from "react-hook-form";
+import { useRouter } from "next/navigation";
+import {
+  getFromLocalStorage,
+  setToLocalStorage,
+} from "@/components/utils/local-storage";
+
+interface ISteps {
+  title?: string;
+  content?: React.ReactElement | React.ReactNode;
+}
+
+interface IStepsProps {
+  steps: ISteps[];
+  submitHandler: (el: any) => void;
+  navigateLink?: string;
+}
+
+const StepperForm = ({ steps, submitHandler, navigateLink }: IStepsProps) => {
+  const router = useRouter();
+  const [current, setCurrent] = useState<number>(
+    !!getFromLocalStorage("step")
+      ? Number(JSON.parse(getFromLocalStorage("step") as string).step)
+      : 0
+  );
+
+  useEffect(() => {
+    setToLocalStorage("step", JSON.stringify({ step: current }));
+  }, [current]);
+
+  const next = () => {
+    setCurrent(current + 1);
+  };
+
+  const prev = () => {
+    setCurrent(current - 1);
+  };
+
+  const items = steps.map((item) => ({ key: item.title, title: item.title }));
+
+  const methods = useForm();
+
+  const { handleSubmit, reset } = methods;
+
+  const handleStudentOnSubmit = (data: any) => {
+    submitHandler(data);
+    reset();
+    setToLocalStorage("step", JSON.stringify({ step: 0 }));
+    navigateLink && router.push(navigateLink);
+  };
+
+  return (
+    <>
+      <Steps current={current} items={items} style={{ margin: "16pt 0" }} />
+      <FormProvider {...methods}>
+        <form onSubmit={handleSubmit(handleStudentOnSubmit)}>
+          <div>{steps[current].content}</div>
+          <div style={{ marginTop: 24 }}>
+            {current < steps.length - 1 && (
+              <Button
+                style={{
+                  backgroundColor: "#2663EB",
+                  color: "white",
+                }}
+                onClick={() => next()}
+              >
+                Next
+              </Button>
+            )}
+            {current === steps.length - 1 && (
+              <Button
+                style={{
+                  backgroundColor: "#2663EB",
+                  color: "white",
+                }}
+                htmlType="submit"
+                onClick={() => message.success("Processing complete!")}
+              >
+                Done
+              </Button>
+            )}
+            {current > 0 && (
+              <Button style={{ margin: "0 8px" }} onClick={() => prev()}>
+                Previous
+              </Button>
+            )}
+          </div>
+        </form>
+      </FormProvider>
+    </>
+  );
+};
+
+export default StepperForm;

@@ -1,5 +1,6 @@
+import ClientRequisitionForm from "@/components/Clients/Requisition";
 import Modal from "@/components/shared/Modal";
-import { neon_font } from "@/fonts";
+import { bona_nova, neon_font, noto_sans, space_grotest } from "@/fonts";
 import React, { useState } from "react";
 import Typical from "react-typical";
 
@@ -45,15 +46,15 @@ const LeftSide = () => {
         </p>
 
         <button
-          className="bg-primary md:w-[30%] md:text-[1.2rem] md:py-4 py-2 rounded-md md:rounded-[50px] text-white"
+          className={`bg-primary uppercase md:w-fit md:text-[1.2rem] md:py-4 py-2 px-8 rounded-md md:rounded-[50px] text-white ${space_grotest.className}`}
           onClick={openModal}
         >
-          Place Requision Today
+          Be Our Client
         </button>
       </div>
 
       <Modal isOpen={isModalOpen} closeModal={closeModal}>
-        <p>this will be a form where client can place their requision</p>
+        <ClientRequisitionForm />
       </Modal>
     </div>
   );
