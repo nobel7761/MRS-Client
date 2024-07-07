@@ -10,7 +10,7 @@ const Navbar = () => {
   return (
     <div className="mt-8 z-10">
       <div
-        className="w-[65%] mx-auto  py-2 pl-10 rounded-tl-full rounded-tr-full overflow-hidden"
+        className="w-[65%] mx-auto py-2 pl-10 rounded-tl-full rounded-tr-full overflow-hidden"
         style={{
           background: "linear-gradient( 90deg, #2663EB 0%, #ff50b8 100%)",
         }}
@@ -20,13 +20,13 @@ const Navbar = () => {
             <FaPhoneAlt />
             <div className=" flex gap-x-2 items-center">
               <p className={`${space_grotest.className}`}>Call Now</p>
-              <p>01701228430</p>
+              <p>01701228433</p>
             </div>
           </div>
 
           <div className="w-1/5 flex gap-x-10 items-center">
             <Link
-              href="https://wa.me/+8801701228430"
+              href="https://wa.me/+8801701228433"
               target="_blank"
               className="w-fit"
             >

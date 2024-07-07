@@ -16,8 +16,9 @@ const TopCover = ({
 }) => {
   return (
     <div
-      className={`bg-cover bg-center -mt-60 py-72 ${height}`}
+      className={`bg-cover bg-center -mt-[12.5rem] pt-60  ${height}`}
       style={{
+        backgroundSize: "cover",
         backgroundImage: `url(${imageUrl})`,
         backgroundBlendMode: "overlay",
         backgroundColor: "rgba(17, 10, 30, 0.7)",
