@@ -1,7 +1,8 @@
+//
+
 "use client";
 
 import { getErrorMessageByPropertyName } from "@/components/utils/schema-validator";
-import { Input } from "antd";
 import { Controller, useFormContext } from "react-hook-form";
 
 interface IInput {
@@ -17,8 +18,8 @@ interface IInput {
 
 const FormInput = ({
   name,
-  type,
-  size,
+  type = "text",
+  size = "large",
   value,
   id,
   placeholder,
@@ -33,25 +34,32 @@ const FormInput = ({
   const errorMessage = getErrorMessageByPropertyName(errors, name);
 
   return (
-    <>
-      {label ? label : null}
-
+    <div className="mb-4">
+      {label && (
+        <label className="block text-sm font-medium text-gray-700">
+          {label}
+        </label>
+      )}
       <Controller
         control={control}
         name={name}
         render={({ field }) =>
           type === "password" ? (
-            <Input.Password
-              type={type}
-              size={size}
+            <input
+              type="password"
+              className={`mt-1 block w-full ${
+                size === "large" ? "py-2 px-3" : "py-1 px-2"
+              } border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm`}
               placeholder={placeholder}
               {...field}
               value={value ? value : field.value}
             />
           ) : (
-            <Input
+            <input
               type={type}
-              size={size}
+              className={`mt-1 block w-full ${
+                size === "large" ? "py-2 px-3" : "py-1 px-2"
+              } border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm`}
               placeholder={placeholder}
               {...field}
               value={value ? value : field.value}
@@ -59,8 +67,8 @@ const FormInput = ({
           )
         }
       />
-      <small style={{ color: "red" }}>{errorMessage}</small>
-    </>
+      {errorMessage && <small className="text-red-500">{errorMessage}</small>}
+    </div>
   );
 };
 

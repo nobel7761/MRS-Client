@@ -1,6 +1,5 @@
 import CustomContainer from "@/components/shared/Container";
 import Title from "@/components/shared/Title";
-import React from "react";
 
 const Services = () => {
   return (

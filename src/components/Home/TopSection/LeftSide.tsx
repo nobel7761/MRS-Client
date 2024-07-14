@@ -1,7 +1,7 @@
 import ClientRequisitionForm from "@/components/Clients/Requisition";
 import Modal from "@/components/shared/Modal";
-import { bona_nova, neon_font, noto_sans, space_grotest } from "@/fonts";
-import React, { useState } from "react";
+import { neon_font, space_grotest } from "@/fonts";
+import { useState } from "react";
 import Typical from "react-typical";
 
 const LeftSide = () => {

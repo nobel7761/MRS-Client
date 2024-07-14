@@ -1,5 +1,5 @@
+import Modal from "@/components/shared/Modal";
 import Image from "next/image";
-import Modal from "../../shared/Modal";
 import { useState } from "react";
 import IntroForm from "./IntroForm";
 

@@ -1,22 +1,13 @@
-import CustomContainer from "@/components/shared/Container";
-import Title from "@/components/shared/Title";
-import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
-import {
-  FaRegArrowAltCircleLeft,
-  FaRegArrowAltCircleRight,
-} from "react-icons/fa";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import {
-  Autoplay,
-  EffectCoverflow,
-  Pagination,
-  Navigation,
-} from "swiper/modules";
+import { Autoplay, EffectCoverflow } from "swiper/modules";
+import CustomContainer from "@/components/shared/Container";
+import Title from "@/components/shared/Title";
 import Link from "next/link";
+import Image from "next/image";
 
 const blogData = [
   {

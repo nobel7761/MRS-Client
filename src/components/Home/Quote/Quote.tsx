@@ -1,7 +1,6 @@
 import CustomContainer from "@/components/shared/Container";
 import { bona_nova } from "@/fonts";
 import Image from "next/image";
-import React from "react";
 
 const Quote = () => {
   return (

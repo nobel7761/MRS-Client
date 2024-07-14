@@ -1,4 +1,3 @@
-import React from "react";
 import TopCover from "../shared/TopCover.component";
 
 const BlogPageComponent = () => {

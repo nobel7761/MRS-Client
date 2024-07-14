@@ -1,8 +1,8 @@
 import Link from "next/link";
-import BrandLogo from "./BrandLogo";
-import { space_grotest } from "@/fonts";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
+import BrandLogo from "./BrandLogo";
+import { space_grotest } from "@/fonts";
 
 const navbarItems = [
   {

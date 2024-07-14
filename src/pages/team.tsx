@@ -1,11 +1,11 @@
-import TeamPageComponent from "@/components/Team/Team.component";
 import { layoutUser } from "@/components/layouts/UserLayout";
+import TeamPageComponent from "@/components/Team/Team.component";
 
 const TeamPage = () => {
   return (
     <div>
       <TeamPageComponent />
-      <h1>team</h1>
+      {/* <h1>team</h1> */}
     </div>
   );
 };

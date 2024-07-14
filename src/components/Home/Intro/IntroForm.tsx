@@ -1,6 +1,6 @@
 import LoadingIcon from "@/components/shared/LoadingIcon";
 import { useState } from "react";
-import { useForm, Controller } from "react-hook-form";
+import { Controller, useForm } from "react-hook-form";
 import swal from "sweetalert";
 
 const IntroForm = ({ onClose }: { onClose: () => void }) => {

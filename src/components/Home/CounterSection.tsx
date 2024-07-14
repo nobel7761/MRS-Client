@@ -1,5 +1,5 @@
-import { FaPlus } from "react-icons/fa";
 import CountUp from "react-countup";
+import { FaPlus } from "react-icons/fa";
 
 const CounterSection = () => {
   return (

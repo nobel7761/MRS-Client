@@ -1,10 +1,10 @@
 import Link from "next/link";
-import MainNavbar from "./MainNavbar";
 import { FaPhoneAlt } from "react-icons/fa";
 import { IoLogoWhatsapp } from "react-icons/io";
 import { BsFacebook } from "react-icons/bs";
 import { MdEmail } from "react-icons/md";
 import { space_grotest } from "@/fonts";
+import MainNavbar from "./MainNavbar";
 
 const Navbar = () => {
   return (

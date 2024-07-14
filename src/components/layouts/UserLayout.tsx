@@ -1,6 +1,6 @@
 import { ReactElement, ReactNode } from "react";
-import { layoutMain } from "./MainLayout";
 import Navbar from "../shared/Navbar";
+import { layoutMain } from "./MainLayout";
 
 const UserLayout = ({ children }: { children: ReactNode }) => {
   return (

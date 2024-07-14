@@ -29,7 +29,9 @@ const ClientRequisitionForm = () => {
 
   return (
     <div>
-      <h1>Create Student</h1>
+      <h1 className="flex justify-center uppercase font-extrabold text-primary text-3xl">
+        Be Our Precious Client
+      </h1>
       <StepperForm
         submitHandler={(value) => handleStudentSubmit(value)}
         steps={steps}
