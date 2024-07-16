@@ -3,30 +3,32 @@ import TopCover from "../shared/TopCover.component";
 
 const teamMembers = [
   {
-    name: "Yomi Denzel",
-    role: "E-Commerce 2.0",
-    image: "/path-to-yomi-image.jpg",
-    gradient: "bg-gradient-to-r from-[#1E3A8A] to-[#3B82F6]",
+    name: "Laboni",
+    role: "Marketing Executive",
+    source: "/teams/fariha.png",
+    description:
+      "It was in high school, then a student that Timothée understood the false freedom offered by studies. It was in high school, then a student that Timothée understood the false freedom offered by studies. It was in high school, then a student that Timothée understood the false freedom offered by studies",
   },
   {
-    name: "Timothée Moiroux",
-    role: "Investissement Immobilier",
-    image: "/path-to-timothee-image.jpg",
-    gradient: "bg-gradient-to-r from-[#1E3A8A] to-[#3B82F6]",
+    name: "Rokaiah Fardous Sumaiah",
+    role: "HR Executive",
+    source: "/teams/fariha.png",
     description:
       "It was in high school, then a student that Timothée understood the false freedom offered by studies...",
   },
   {
-    name: "David Sequiera",
-    role: "Closing",
-    image: "/path-to-david-image.jpg",
-    gradient: "bg-gradient-to-r from-[#1E3A8A] to-[#3B82F6]",
+    name: "Fariha Mim",
+    role: "Training & Development Advisor",
+    source: "/teams/fariha.png",
+    description:
+      "It was in high school, then a student that Timothée understood the false freedom offered by studies...",
   },
   {
-    name: "Manuel Ravier",
-    role: "Investissement Immobilier",
-    image: "/path-to-manuel-image.jpg",
-    gradient: "bg-gradient-to-r from-[#1E3A8A] to-[#3B82F6]",
+    name: "Hira",
+    role: "Marketing Executive",
+    source: "/teams/fariha.png",
+    description:
+      "It was in high school, then a student that Timothée understood the false freedom offered by studies...",
   },
 ];
 

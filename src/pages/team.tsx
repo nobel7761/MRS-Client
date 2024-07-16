@@ -5,7 +5,6 @@ const TeamPage = () => {
   return (
     <div>
       <TeamPageComponent />
-      {/* <h1>team</h1> */}
     </div>
   );
 };

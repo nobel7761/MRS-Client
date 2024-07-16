@@ -24,7 +24,6 @@ const HomeComponent = () => {
       <Reviews />
       <FAQ />
       <Blog />
-      <h1>this will be footer</h1>
     </div>
   );
 };
