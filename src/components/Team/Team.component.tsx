@@ -4,6 +4,17 @@ import CustomContainer from "../shared/Container";
 import { useState } from "react";
 import styles from "./Team.module.css";
 import { teamMembers } from "@/assets/information";
+// Import Swiper React components
+import { Swiper, SwiperSlide } from "swiper/react";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/effect-fade";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+
+// import required modules
+import { Autoplay } from "swiper/modules";
 
 interface IMember {
   name: string;
@@ -79,15 +90,30 @@ const TeamPageComponent = () => {
 
           <CustomContainer maxWidth="w-[80%]">
             <div className="flex justify-between gap-x-4 overflow-hidden">
-              {teamMembers.map((member, index) => (
-                <TeamMemberCard
-                  key={index}
-                  member={member}
-                  index={index}
-                  hoverIndex={hoverIndex}
-                  setHoverIndex={setHoverIndex}
-                />
-              ))}
+              <Swiper
+                slidesPerView={3}
+                spaceBetween={30}
+                // effect={"fade"}
+                loop={true}
+                autoplay={{
+                  delay: 2500,
+                  disableOnInteraction: false,
+                }}
+                modules={[Autoplay]}
+                allowTouchMove
+              >
+                {teamMembers.map((member, index) => (
+                  <SwiperSlide key={index}>
+                    <TeamMemberCard
+                      key={index}
+                      member={member}
+                      index={index}
+                      hoverIndex={hoverIndex}
+                      setHoverIndex={setHoverIndex}
+                    />
+                  </SwiperSlide>
+                ))}
+              </Swiper>
             </div>
           </CustomContainer>
         </div>
