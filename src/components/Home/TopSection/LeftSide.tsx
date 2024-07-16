@@ -32,7 +32,7 @@ const LeftSide = () => {
 
       <div className="flex flex-col gap-y-10 h-full ">
         <p
-          className={`text-5xl bg-gradient-to-r from-[#2664ebfe] via-[#ae06f6fe] to-[#ff0099] bg-clip-text text-transparent `}
+          className={`text-5xl bg-gradient-to-r from-[#2664ebfe] via-[#ae06f6fe] to-[#ff0099] bg-clip-text text-transparent`}
         >
           A Sustainable Business is Humanly Possible When Perfect Employee Works
           in Perfect Company

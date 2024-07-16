@@ -1,0 +1,31 @@
+/* Team.module.css */
+
+@keyframes slideInFromBottom {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideOutToBottom {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+}
+
+.slideIn {
+  animation: slideInFromBottom 0.5s ease-out forwards;
+}
+
+.slideOut {
+  animation: slideOutToBottom 0.5s ease-out forwards;
+}
