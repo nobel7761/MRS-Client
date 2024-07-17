@@ -23,9 +23,14 @@
 }
 
 .slideIn {
-  animation: slideInFromBottom 0.5s ease-out forwards;
+  animation: slideInFromBottom 1s ease-out forwards;
 }
 
 .slideOut {
-  animation: slideOutToBottom 0.5s ease-out forwards;
+  animation: slideOutToBottom 1s ease-out forwards;
+}
+
+.team-section {
+  animation: slideInFromBottom 1s ease-out forwards;
+  /* animation-fill-mode: ; */
 }
