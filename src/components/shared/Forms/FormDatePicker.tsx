@@ -1,98 +1,84 @@
-// import { DatePicker, DatePickerProps, Input } from "antd";
-// import { Controller, useFormContext } from "react-hook-form";
-// import dayjs, { Dayjs } from "dayjs";
-
-// type UMDatePikerProps = {
-//   onChange?: (valOne: Dayjs | null, valTwo: string) => void;
-//   name: string;
-//   label?: string;
-//   value?: Dayjs;
-//   size?: "large" | "small";
-// };
-
-// const FormDatePicker = ({
-//   name,
-//   label,
-//   onChange,
-//   size = "large",
-// }: UMDatePikerProps) => {
-//   const { control, setValue } = useFormContext();
-
-//   const handleOnChange: DatePickerProps["onChange"] = (date, dateString) => {
-//     onChange ? onChange(date, dateString as string) : null;
-//     setValue(name, dateString);
-//   };
-
-//   return (
-//     <div>
-//       {label ? label : null}
-//       <br />
-//       <Controller
-//         name={name}
-//         control={control}
-//         render={({ field }) => (
-//           <DatePicker
-//             value={dayjs(field.value) || ""}
-//             size={size}
-//             onChange={handleOnChange}
-//             style={{ width: "100%" }}
-//           />
-//         )}
-//       />
-//     </div>
-//   );
-// };
-
-// export default FormDatePicker;
+"use client";
 
 import { Controller, useFormContext } from "react-hook-form";
 import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
+import { getErrorMessageByPropertyName } from "@/components/utils/schema-validator";
 
-type UMDatePikerProps = {
-  onChange?: (valOne: Date | null, valTwo: string) => void;
+interface IFormDatePicker {
   name: string;
+  type: "Date" | "Time";
+  showTimeSelect?: boolean;
+  showTimeSelectOnly?: boolean;
+  timeIntervals?: number;
+  dateFormat?: string;
+  timeCaption?: string;
   label?: string;
-  value?: Date;
-  size?: "large" | "small";
-};
+  placeholder?: string;
+}
 
 const FormDatePicker = ({
   name,
+  type,
+  showTimeSelect = false,
+  showTimeSelectOnly = false,
+  timeIntervals = 15,
+  // dateFormat = "Pp", // Default format for date and time
+  timeCaption = "Time",
   label,
-  onChange,
-  size = "large",
-}: UMDatePikerProps) => {
-  const { control, setValue } = useFormContext();
+  placeholder,
+}: IFormDatePicker) => {
+  const {
+    control,
+    formState: { errors },
+  } = useFormContext();
 
-  const handleOnChange = (date: Date | null, dateString: string) => {
-    onChange ? onChange(date, dateString) : null;
-    setValue(name, dateString);
-  };
+  const errorMessage = getErrorMessageByPropertyName(errors, name);
 
   return (
-    <div className="mb-4">
+    <div className="mb-2">
       {label && (
         <label className="block text-sm font-medium text-gray-700">
           {label}
         </label>
       )}
-      <br />
       <Controller
-        name={name}
         control={control}
-        render={({ field }) => (
-          <DatePicker
-            selected={(field.value && new Date(field.value)) || null}
-            onChange={(date) => {
-              const dateString = date ? date.toISOString() : "";
-              handleOnChange(date, dateString);
-            }}
-            className={`mt-1 block w-full ${
-              size === "large" ? "py-2 px-3" : "py-1 px-2"
-            } border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm`}
-          />
-        )}
+        name={name}
+        render={({ field }) =>
+          type === "Date" ? (
+            <DatePicker
+              selected={field.value}
+              onChange={(date) => field.onChange(date)}
+              showTimeSelect={showTimeSelect}
+              showTimeSelectOnly={showTimeSelectOnly}
+              timeIntervals={timeIntervals}
+              // dateFormat={dateFormat}
+              timeCaption={timeCaption}
+              placeholderText={placeholder}
+              className="mt-1 block w-full py-2 px-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+            />
+          ) : (
+            <DatePicker
+              selected={field.value}
+              onChange={(date) => field.onChange(date)}
+              showTimeSelect
+              showTimeSelectOnly
+              timeIntervals={15}
+              timeCaption="Time"
+              dateFormat="h:mm aa"
+              // showTimeSelect={showTimeSelect}
+              // showTimeSelectOnly={showTimeSelectOnly}
+              // timeIntervals={timeIntervals}
+              // dateFormat={dateFormat}
+              // timeCaption={timeCaption}
+              placeholderText={placeholder}
+              className="mt-1 block w-full py-2 px-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+            />
+          )
+        }
       />
+      {errorMessage && <small className="text-red-500">{errorMessage}</small>}
     </div>
   );
 };

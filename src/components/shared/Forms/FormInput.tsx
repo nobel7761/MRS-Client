@@ -34,7 +34,7 @@ const FormInput = ({
   const errorMessage = getErrorMessageByPropertyName(errors, name);
 
   return (
-    <div className="mb-4">
+    <div className="mb-2">
       {label && (
         <label className="block text-sm font-medium text-gray-700">
           {label}
