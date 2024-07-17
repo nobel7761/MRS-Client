@@ -54,9 +54,7 @@ const TeamMemberCard = ({
                 member.name.includes("Laboni")) &&
               "scale-x-125"
             }
-
             ${member.name.includes("Rokaiah") && "scale-110"}
-            
             `}
         />
         <div className="absolute bottom-0 left-0 right-0 h-1/3 bg-gradient-to-t from-black via-black/70 to-transparent"></div>

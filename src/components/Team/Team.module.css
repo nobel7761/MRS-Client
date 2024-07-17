@@ -29,8 +29,3 @@
 .slideOut {
   animation: slideOutToBottom 1s ease-out forwards;
 }
-
-.team-section {
-  animation: slideInFromBottom 1s ease-out forwards;
-  /* animation-fill-mode: ; */
-}
