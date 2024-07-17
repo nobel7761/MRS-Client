@@ -14,7 +14,9 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 // import required modules
 import { Autoplay } from "swiper/modules";
-import { FaArrowLeftLong, FaArrowRightLong } from "react-icons/fa6";
+
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 interface IMember {
   name: string;
@@ -89,6 +91,31 @@ const TeamMemberCard = ({
 
 const TeamPageComponent = () => {
   const [hoverIndex, setHoverIndex] = useState<number | null>(null);
+  const { ref, inView } = useInView({ triggerOnce: true });
+
+  const containerVariants = {
+    hidden: { opacity: 0, y: 100 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 1,
+        ease: "easeOut",
+      },
+    },
+  };
+
+  const headingVariants = {
+    hidden: { opacity: 0, y: -50 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 1,
+        ease: "easeOut",
+      },
+    },
+  };
 
   return (
     <div>
@@ -96,19 +123,30 @@ const TeamPageComponent = () => {
 
       <section className="bg-[#060628] text-white py-16">
         <div className="container mx-auto text-center">
-          <h2 className="text-4xl font-bold mb-8">
+          <motion.h2
+            variants={headingVariants}
+            initial="hidden"
+            animate={inView ? "visible" : "hidden"}
+            className="text-4xl font-bold mb-8"
+          >
             Partnered with most of the <br />
             <span className="text-blue-400">top people at each industry</span>
-          </h2>
+          </motion.h2>
 
           <CustomContainer maxWidth="w-[70%]">
-            <div className={`flex justify-between gap-x-4 overflow-hidden`}>
+            <motion.div
+              ref={ref}
+              variants={containerVariants}
+              initial="hidden"
+              animate={inView ? "visible" : "hidden"}
+              className="flex justify-between gap-x-4 overflow-hidden"
+            >
               <Swiper
                 slidesPerView={3}
                 spaceBetween={30}
                 loop={true}
                 autoplay={{
-                  delay: 2500,
+                  delay: 3500,
                   disableOnInteraction: true,
                 }}
                 modules={[Autoplay]}
@@ -125,7 +163,7 @@ const TeamPageComponent = () => {
                   </SwiperSlide>
                 ))}
               </Swiper>
-            </div>
+            </motion.div>
           </CustomContainer>
         </div>
       </section>
