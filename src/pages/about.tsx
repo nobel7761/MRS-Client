@@ -5,7 +5,6 @@ const AboutPage = () => {
   return (
     <div>
       <AboutPageComponent />
-      <h1>about</h1>
     </div>
   );
 };

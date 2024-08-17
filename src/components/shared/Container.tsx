@@ -7,7 +7,9 @@ const CustomContainer = ({
   maxWidth?: string;
   children: ReactElement;
 }) => {
-  return <div className={`${maxWidth} mx-auto`}>{children}</div>;
+  return (
+    <div className={`${maxWidth} mx-auto overflow-hidden`}>{children}</div>
+  );
 };
 
 export default CustomContainer;

@@ -17,8 +17,8 @@ const Intro = () => {
   return (
     <div className="bg-white px-4 py-5 md:px-0 md:py-0">
       <div className="md:w-10/12 mx-auto md:flex md:gap-x-4 md:py-10">
-        <div className="md:w-1/2 md:py-5 md:px-10 flex flex-col md:gap-y-10 gap-y-4">
-          <h1 className="font-extrabold md:text-[3rem] text-[1.5rem]">
+        <div className="md:w-1/2 md:py-5 md:px-10 flex flex-col md:gap-y-4">
+          <h1 className="font-extrabold text-[2.5rem]">
             Looking Employees For Your Business? Here We GoOo...
           </h1>
           <p>

@@ -4,7 +4,7 @@ import React from "react";
 const BrandLogo = ({ className }: { className: string }) => {
   return (
     <Image
-      src="/Logos/brand-logo.jpg"
+      src="/Logos/brand-logo-no-background.png"
       alt="mrs-logo"
       height={2400}
       width={2400}

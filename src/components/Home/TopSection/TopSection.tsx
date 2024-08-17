@@ -4,21 +4,22 @@ import "swiper/css";
 import "swiper/css/effect-cards";
 import RightSide from "./RightSide";
 import LeftSide from "./LeftSide";
+import BottomSection from "./BottomSection";
 
 const TopSection = () => {
   return (
-    <div className="">
-      <TopCover height="min-h-[120vh]" imageUrl="/banner-background.jpg">
-        <CustomContainer>
-          <>
-            <div className="flex gap-x-10">
-              <div className={`w-[50%]`}>
-                <LeftSide />
-              </div>
+    <div className="bg-backgroundColor">
+      {/* <TopCover height="min-h-[120vh]" imageUrl="/banner-background.jpg"> */}
+      <CustomContainer>
+        <>
+          <div className="flex gap-x-10 mt-10">
+            <div className={`w-[50%]`}>
+              <LeftSide />
+            </div>
 
-              <div className={`w-[50%]`}>
-                <RightSide />
-                {/* <Swiper
+            <div className={`w-[50%]`}>
+              <RightSide />
+              {/* <Swiper
                   effect={"cards"}
                   grabCursor={true}
                   modules={[EffectCards]}
@@ -41,9 +42,9 @@ const TopSection = () => {
                     </SwiperSlide>
                   ))}
                 </Swiper> */}
-              </div>
+            </div>
 
-              {/* <div className={`w-[60%] relative`}>
+            {/* <div className={`w-[60%] relative`}>
                 <div className="w-[70%] top-0 rounded-3xl bg-gradient-to-r from-[#5956f0] to-[#ff50b8]">
                   <Image
                     src={HeroImage1}
@@ -70,10 +71,12 @@ const TopSection = () => {
                   <p className="text-7xl text-white">MRS</p>
                 </div>
               </div> */}
-            </div>
-          </>
-        </CustomContainer>
-      </TopCover>
+          </div>
+
+          <BottomSection />
+        </>
+      </CustomContainer>
+      {/* </TopCover> */}
     </div>
   );
 };

@@ -1,3 +1,4 @@
+import { getErrorMessageByPropertyName } from "@/components/utils/schema-validator";
 import { Controller, useFormContext } from "react-hook-form";
 
 type TextAreaProps = {
@@ -6,6 +7,7 @@ type TextAreaProps = {
   rows?: number;
   value?: string;
   placeholder?: string;
+  validation?: Object;
 };
 
 const FormTextArea = ({
@@ -14,8 +16,13 @@ const FormTextArea = ({
   rows = 4,
   value,
   placeholder,
+  validation,
 }: TextAreaProps) => {
-  const { control } = useFormContext();
+  const {
+    control,
+    formState: { errors },
+  } = useFormContext();
+  const errorMessage = getErrorMessageByPropertyName(errors, name);
   return (
     <div className="mb-2">
       {label && (
@@ -26,6 +33,7 @@ const FormTextArea = ({
       <Controller
         name={name}
         control={control}
+        rules={validation}
         render={({ field }) => (
           <textarea
             rows={rows}
@@ -36,6 +44,8 @@ const FormTextArea = ({
           />
         )}
       />
+
+      {errorMessage && <small className="text-red-500">{errorMessage}</small>}
     </div>
   );
 };

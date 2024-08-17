@@ -5,10 +5,12 @@ import { BsFacebook } from "react-icons/bs";
 import { MdEmail } from "react-icons/md";
 import { space_grotest } from "@/fonts";
 import MainNavbar from "./MainNavbar";
+import { useRouter } from "next/router";
 
 const Navbar = () => {
+  const { pathname } = useRouter();
   return (
-    <div className="mt-8 z-10">
+    <div className={`${pathname === "/" && "bg-backgroundColor"} pt-8 z-10`}>
       <div
         className="w-[65%] mx-auto py-2 pl-10 rounded-tl-full rounded-tr-full overflow-hidden"
         style={{

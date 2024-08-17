@@ -92,7 +92,7 @@ const TopCover = ({
 
   return (
     <div
-      className={`bg-cover bg-center -mt-[12.5rem] pt-60  ${height}`}
+      className={`bg-cover bg-center -mt-[12.5rem] pt-60 ${height}`}
       style={{
         backgroundSize: "cover",
         backgroundImage: `url(${imageUrl})`,

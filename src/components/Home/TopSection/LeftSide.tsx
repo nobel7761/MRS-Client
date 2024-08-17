@@ -17,7 +17,7 @@ const LeftSide = () => {
 
   return (
     <div className="text-white h-full overflow-hidden">
-      <div
+      {/* <div
         className={`flex gap-x-5 text-5xl font-bold uppercase text-neon-orange mb-20 ${neon_font.className}`}
       >
         FIND YOUR{" "}
@@ -28,17 +28,17 @@ const LeftSide = () => {
             wrapper="b"
           />
         </p>
-      </div>
+      </div> */}
 
       <div className="flex flex-col gap-y-10 h-full ">
         <p
-          className={`text-5xl bg-gradient-to-r from-[#2664ebfe] via-[#ae06f6fe] to-[#ff0099] bg-clip-text text-transparent`}
+          className={`text-[2rem] font-semibold bg-gradient-to-r from-[#2664ebfe] via-[#ae06f6fe] to-[#ff0099] bg-clip-text text-transparent`}
         >
           A Sustainable Business is Humanly Possible When Perfect Employee Works
           in Perfect Company
         </p>
 
-        <p className="text-lg">
+        <p className="text-lg text-black">
           At Manpower Research &amp; Synchronization, we believe meaningful,
           sustainable employment has the power to change the world. Because when
           you combine talented people with innovative companies, you can build a

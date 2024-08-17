@@ -17,18 +17,18 @@ const navbarItems = [
     label: "Team",
     route: "/team",
   },
-  {
-    label: "Career",
-    route: "/career",
-  },
+  // {
+  //   label: "Career",
+  //   route: "/career",
+  // },
   {
     label: "About",
     route: "/about",
   },
-  {
-    label: "Contact",
-    route: "/contact",
-  },
+  // {
+  //   label: "Contact",
+  //   route: "/contact",
+  // },
 ];
 
 const MainNavbar = () => {
@@ -40,22 +40,19 @@ const MainNavbar = () => {
   }, [router.pathname]);
 
   return (
-    <div className="max-w-[82.5%] mx-auto bg-white px-[3rem] py-5 rounded-full overflow-hidden flex justify-between items-center gap-x-[10%]">
+    <div className="max-w-[82.5%] mx-auto bg-primary px-[3rem] py-5 rounded-full overflow-hidden flex justify-between items-center gap-x-[10%]">
       <Link href="/" className="w-[25%]">
-        <BrandLogo className="transform hover:scale-125 transition-transform duration-300" />
+        <BrandLogo className="transform hover:scale-125 transition-transform duration-300 " />
       </Link>
 
-      {/* <BrandLogo className="w-[25%] transform hover:scale-125 transition-transform duration-300" /> */}
-      <nav className="w-[65%] flex justify-between pr-10">
+      <nav className="w-[45%] flex justify-between pr-10">
         {navbarItems.map((item, index) => (
           <Link
             key={index}
             href={item.route}
-            className={`text-xl ${
-              space_grotest.className
-            } hover:text-facebook ${
+            className={`text-xl ${space_grotest.className} hover:text-white ${
               activeRoute === item.route
-                ? "text-blue-600 font-extrabold"
+                ? "text-white font-extrabold"
                 : "text-black"
             }`}
           >

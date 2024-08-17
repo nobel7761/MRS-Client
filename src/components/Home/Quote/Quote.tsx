@@ -25,7 +25,7 @@ const Quote = () => {
                 className="w-[80px]"
               />
               <p
-                className={`text-center text-[2rem] text-white font-extrabold ${bona_nova.className}`}
+                className={`text-center text-[1.5rem] text-white font-extrabold ${bona_nova.className}`}
               >
                 Rivers do not drink their own water, trees do not eat their own
                 fruit.

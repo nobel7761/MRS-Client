@@ -12,7 +12,7 @@ const config: Config = {
         facebook: "#2176FF",
         whatsapp: "#46EE65",
         primary: "#2663EB",
-        backgroundColor: "#FCF8F4",
+        backgroundColor: "#FDF8DE",
       },
     },
   },
