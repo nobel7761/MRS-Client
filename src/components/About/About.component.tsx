@@ -40,16 +40,19 @@ const AboutPageComponent = () => {
               <p className="w-[2px] h-[80%] bg-primary"></p>
             </div>
             <div className="w-1/2 py-2 flex flex-col gap-y-8">
-              <p>
-                Manpower Research &amp; Synchronization is a premier provider of
-                software development and testing services. Having talented
-                software engineers on board, we craft compelling web, desktop,
-                and mobile applications for our clients.
-              </p>
-              <p>
-                Since our inception, we have partnered with numerous companies
-                and delivered operational gains to startup, emerging, and
-                established organizations in the United States and Canada.
+              <p className="text-justify">
+                Manpower Research and Synchronization began its operation in
+                2021. At present, its primary service area is in Dhaka,
+                Bangladesh and after completing some mission, it will serve the
+                global manpower solution. It is transformed to work by aiming to
+                cultivate the strength of people, to unfold the opportunity in
+                our society that people naturally can put their efforts for
+                happiness and add value to the business. It observes the
+                challenges how we are creating in our lives and finds the
+                optimum contrivances to minimize it. It has innovative team work
+                to construct the believe in the people that life is what we work
+                on and it happens what we expect. It has taken an assiduity to
+                implement that People is a beauty of the earth.
               </p>
             </div>
           </div>

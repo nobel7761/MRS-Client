@@ -24,14 +24,13 @@ const HomeComponent = () => {
       <Clients />
       <TrainingAndDevelopment />
       <WhyWeAre />
-      <FAQ />
+      {/* <FAQ /> */}
       <Blog />
-      {/* <AboutUs />
+      {/* <AboutUs /> */}
       <Services />
-      <Teams />
-      
-      <Reviews />
-       */}
+      {/* <Teams /> */}
+
+      {/* <Reviews /> */}
     </div>
   );
 };

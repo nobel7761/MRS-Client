@@ -123,3 +123,25 @@ export const benefits = [
       "Optimize your processes with our experienced professionals for greater efficiency.",
   },
 ];
+
+export const services = [
+  {
+    id: 1,
+    image: "/mrs/services/image01.webp",
+    logo: "/mrs/services/logo01.svg",
+    description:
+      "Contingent and permanent recruitment and management solutions",
+  },
+  {
+    id: 2,
+    image: "/mrs/services/image02.webp",
+    logo: "/mrs/services/logo02.svg",
+    description: "IT professional resourcing and project-based solutions",
+  },
+  {
+    id: 3,
+    image: "/mrs/services/image03.webp",
+    logo: "/mrs/services/logo03.svg",
+    description: "End-to-end talent lifecycle solutions",
+  },
+];

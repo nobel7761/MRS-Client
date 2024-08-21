@@ -45,7 +45,7 @@ const WhyWeAre = () => {
                 className="w-full h-[250px]"
               />
               <p className="text-center text-xl font-bold">
-                Sustainable and nonstop flow of work force
+                Sustainable work force
               </p>
             </div>
           </div>

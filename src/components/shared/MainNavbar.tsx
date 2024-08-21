@@ -14,6 +14,10 @@ const navbarItems = [
     route: "/blog",
   },
   {
+    label: "Service",
+    route: "/service",
+  },
+  {
     label: "Team",
     route: "/team",
   },
