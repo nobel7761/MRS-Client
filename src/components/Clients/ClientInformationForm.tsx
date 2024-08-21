@@ -34,6 +34,7 @@ const ClientInformationForm = () => {
               name="client.name"
               size="large"
               placeholder="Company Name"
+              validation={{ required: "Company Name is required" }}
             />
           </div>
           <div className="">
@@ -42,6 +43,7 @@ const ClientInformationForm = () => {
               name="client.address"
               size="large"
               placeholder="Company Address"
+              validation={{ required: "Company Address is required" }}
             />
           </div>
           <div className="">
@@ -71,6 +73,7 @@ const ClientInformationForm = () => {
                 name={`client.contactPersons[${index}].name`}
                 size="large"
                 placeholder="Name"
+                validation={{ required: "Contact Person Name is required" }}
               />
             </div>
             <div className="">
@@ -79,13 +82,16 @@ const ClientInformationForm = () => {
                 name={`client.contactPersons[${index}].designation`}
                 size="large"
                 placeholder="Designation"
+                validation={{
+                  required: "Contact Person Designation is required",
+                }}
               />
             </div>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div className="">
               <FormInput
-                type="text"
+                type="email"
                 name={`client.contactPersons[${index}].email`}
                 size="large"
                 placeholder="Email"
@@ -93,10 +99,11 @@ const ClientInformationForm = () => {
             </div>
             <div className="">
               <FormInput
-                type="text"
+                type="number"
                 name={`client.contactPersons[${index}].mobile`}
                 size="large"
                 placeholder="Contact Number"
+                validation={{ required: "Contact Person Number is required" }}
               />
             </div>
           </div>

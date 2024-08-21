@@ -6,9 +6,11 @@ import FormSelect from "../shared/Forms/FormSelect";
 import FormTextArea from "../shared/Forms/FormTextArea";
 import CustomAlert from "../shared/Alert";
 import { FaTrashAlt } from "react-icons/fa";
+import FormCheckbox from "../shared/Forms/FormCheckbox";
 
 const ServiceRequisitionForm = () => {
   const [requisitions, setRequisitions] = useState([{ id: Date.now() }]);
+  const [foodFacilityChecked, setFoodFacilityChecked] = useState(false);
 
   const addRequisition = () => {
     setRequisitions([...requisitions, { id: Date.now() }]);
@@ -25,6 +27,10 @@ const ServiceRequisitionForm = () => {
     setRequisitions(requisitions.filter((person) => person.id !== id));
   };
 
+  const handleFoodFacilityChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setFoodFacilityChecked(e.target.checked);
+  };
+
   return (
     <div>
       {requisitions.map((requisition, index) => (
@@ -39,24 +45,83 @@ const ServiceRequisitionForm = () => {
           </p>
 
           <div className="">
-            <FormSelect
-              name="requisition.position"
-              size="large"
-              placeholder="Select Position"
-              options={[
-                { label: "HR", value: "hr" },
-                { label: "Engineer", value: "engineer" },
-              ]}
-            />
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <FormInput
-                type="number"
-                name="requisition.numberOfVacancy"
+                type="text"
+                name="requisition.position"
                 size="large"
-                placeholder="Number of vacancy"
+                placeholder="Position"
+                validation={{
+                  required: "Position is required",
+                }}
               />
 
               <FormInput
+                type="number"
+                name="requisition.numberOfManpower"
+                size="large"
+                placeholder="Number of Manpower"
+              />
+            </div>
+
+            <FormTextArea
+              name="requisition.jobDescription"
+              placeholder="Job Description"
+              validation={{
+                required: "Job Description is required",
+              }}
+            />
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <FormSelect
+                name="requisition.gender"
+                size="large"
+                placeholder="Select Gender"
+                options={[
+                  { label: "Male", value: "male" },
+                  { label: "Female", value: "female" },
+                ]}
+              />
+
+              <FormInput
+                type="text"
+                name="requisition.ageLimit"
+                size="large"
+                placeholder="Age Limit (maximum)"
+              />
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <FormInputGroup
+                name="requisition.payment"
+                placeholder="Payment"
+                type="number"
+                options={[
+                  { label: "Hourly", value: "hourly" },
+                  { label: "Weekly", value: "weekly" },
+                  { label: "Monthly", value: "Monthly" },
+                ]}
+              />
+
+              <FormSelect
+                name="requisition.education"
+                size="large"
+                placeholder="Minimum Education"
+                options={[
+                  { label: "Class 5", value: "5" },
+                  { label: "Class 8", value: "8" },
+                  { label: "SSC", value: "ssc" },
+                  { label: "HSC", value: "hsc" },
+                  {
+                    label: "University Student",
+                    value: "university student",
+                  },
+                  { label: "Uneducated", value: "uneducated" },
+                  { label: "Not Applicable", value: "not applicable" },
+                ]}
+              />
+
+              {/* <FormInput
                 type="number"
                 name="requisition.salary"
                 size="large"
@@ -68,27 +133,33 @@ const ServiceRequisitionForm = () => {
                 name="requisition.height"
                 size="large"
                 placeholder="Height"
-              />
-
-              <FormInput
-                type="text"
-                name="requisition.age"
-                size="large"
-                placeholder="Age"
-              />
+              /> */}
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <FormCheckbox
+              name="requisition.residence"
+              label="Residence Facility"
+            />
+
+            <FormCheckbox
+              name="requisition.foodFacility"
+              label="Food Facility"
+              onChange={handleFoodFacilityChange}
+            />
+
+            {foodFacilityChecked && (
               <FormSelect
-                name="requisition.gender"
+                name="requisition.foodTimes"
                 size="large"
-                placeholder="Select Gender"
+                placeholder="Select Food Times"
                 options={[
-                  { label: "Male", value: "male" },
-                  { label: "Female", value: "female" },
+                  { label: "2 times", value: "2 times" },
+                  { label: "3 times", value: "3 times" },
                 ]}
               />
+            )}
 
+            {/* <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               <FormSelect
                 name="requisition.tips"
                 size="large"
@@ -109,9 +180,9 @@ const ServiceRequisitionForm = () => {
                   { label: "Not Applicable", value: "not applicable" },
                 ]}
               />
-            </div>
+            </div> */}
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            {/* <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               <FormInput
                 type="number"
                 name="requisition.workingHoursForSingleDay"
@@ -130,27 +201,9 @@ const ServiceRequisitionForm = () => {
                 name="requisition.workingHourStarts"
                 placeholder="Ends at"
               />
-            </div>
+            </div> */}
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-              <FormSelect
-                name="requisition.education"
-                size="large"
-                placeholder="Minimum Education"
-                options={[
-                  { label: "Class 5", value: "5" },
-                  { label: "Class 8", value: "8" },
-                  { label: "SSC", value: "ssc" },
-                  { label: "HSC", value: "hsc" },
-                  {
-                    label: "University Student",
-                    value: "university student",
-                  },
-                  { label: "Uneducated", value: "uneducated" },
-                  { label: "Not Applicable", value: "not applicable" },
-                ]}
-              />
-
+            {/* <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               <FormDatePicker
                 name="requisition.joiningDate"
                 placeholder="Joining Date"
@@ -166,12 +219,7 @@ const ServiceRequisitionForm = () => {
                   { label: "Month", value: "Month" },
                 ]}
               />
-            </div>
-
-            <FormTextArea
-              name="requisition.responsibility"
-              placeholder="Job Responsibility"
-            />
+            </div> */}
           </div>
 
           {index === 0 && (

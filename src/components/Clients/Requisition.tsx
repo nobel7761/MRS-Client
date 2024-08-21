@@ -1,6 +1,5 @@
 import StepperForm from "../shared/Forms/StepperForm";
 import ClientInformationForm from "./ClientInformationForm";
-import ServiceAgreementForm from "./ServiceAgreementForm";
 import ServiceRequisitionForm from "./ServiceRequisitionForm";
 
 const ClientRequisitionForm = () => {
@@ -12,10 +11,6 @@ const ClientRequisitionForm = () => {
     {
       title: "Service Requisition",
       content: <ServiceRequisitionForm />,
-    },
-    {
-      title: "Service Aggrement",
-      content: <ServiceAgreementForm />,
     },
   ];
 

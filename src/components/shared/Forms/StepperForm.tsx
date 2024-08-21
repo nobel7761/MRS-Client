@@ -141,7 +141,7 @@ const StepperForm: React.FC<IStepperFormProps> = ({
         <div className={`flex items-center justify-between`}>
           {steps.map((step, index) => (
             <>
-              <div key={index} className="">
+              <div key={index} className="px-10">
                 {/* rounded filled box */}
                 <div
                   className={` rounded-full flex justify-center items-center
@@ -164,7 +164,7 @@ const StepperForm: React.FC<IStepperFormProps> = ({
               {/* line bar */}
               {index + 1 !== steps.length && (
                 <div
-                  className={`w-full h-0.5 mx-6 
+                  className={`w-full h-0.5 
                 ${
                   getStatusClass(index) === "completed"
                     ? "bg-green-600"
