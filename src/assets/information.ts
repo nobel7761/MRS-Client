@@ -2,6 +2,37 @@ import { MdOutlineRocketLaunch, MdManageAccounts } from "react-icons/md";
 import { GrUserWorker } from "react-icons/gr";
 import { IoIosSettings } from "react-icons/io";
 
+export const navbarItems = [
+  {
+    label: "Home",
+    route: "/",
+  },
+  {
+    label: "Blog",
+    route: "/blog",
+  },
+  {
+    label: "Service",
+    route: "/service",
+  },
+  {
+    label: "Team",
+    route: "/team",
+  },
+  // {
+  //   label: "Career",
+  //   route: "/career",
+  // },
+  {
+    label: "About",
+    route: "/about",
+  },
+  // {
+  //   label: "Contact",
+  //   route: "/contact",
+  // },
+];
+
 export const teamMembers = [
   {
     name: "Towhida Akter Laboni",
@@ -143,5 +174,40 @@ export const services = [
     image: "/mrs/services/image03.webp",
     logo: "/mrs/services/logo03.svg",
     description: "End-to-end talent lifecycle solutions",
+  },
+];
+
+export const clients = [
+  {
+    id: 1,
+    logo: "/mrs/clients/goong-the-castle.jpeg",
+  },
+  {
+    id: 2,
+    logo: "/mrs/clients/griddle.jpeg",
+  },
+  {
+    id: 3,
+    logo: "/mrs/clients/hotel-indropuri.jpeg",
+  },
+  {
+    id: 4,
+    logo: "/mrs/clients/long-life-hospital.jpeg",
+  },
+  {
+    id: 5,
+    logo: "/mrs/clients/purple-cafe.jpeg",
+  },
+  {
+    id: 6,
+    logo: "/mrs/clients/Rustic-Eatery.png",
+  },
+  {
+    id: 7,
+    logo: "/mrs/clients/supermax-hospital.jpeg",
+  },
+  {
+    id: 8,
+    logo: "/mrs/clients/the-cafe-rio.jpeg",
   },
 ];

@@ -39,10 +39,9 @@ const LeftSide = () => {
         </p>
 
         <p className="text-lg text-black">
-          At Manpower Research &amp; Synchronization, we believe meaningful,
-          sustainable employment has the power to change the world. Because when
-          you combine talented people with innovative companies, you can build a
-          brighter future for everyone.
+          We believe meaningful, sustainable employment has the power to change
+          the world. Because when you combine talented people with innovative
+          companies, you can build a brighter future for everyone.
         </p>
 
         <button

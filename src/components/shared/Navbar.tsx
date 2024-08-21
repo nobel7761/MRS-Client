@@ -12,10 +12,10 @@ const Navbar = () => {
   return (
     <div className={`${pathname === "/" && "bg-backgroundColor"} pt-8 z-10`}>
       <div
-        className="w-[65%] mx-auto py-2 pl-10 rounded-tl-full rounded-tr-full overflow-hidden"
-        style={{
-          background: "linear-gradient( 90deg, #2663EB 0%, #ff50b8 100%)",
-        }}
+        className="w-[65%] mx-auto py-2 pl-10 rounded-tl-full rounded-tr-full overflow-hidden bg-[#041E42]"
+        // style={{
+        //   background: "linear-gradient( 90deg, #2663EB 0%, #ff50b8 100%)",
+        // }}
       >
         <div className="text-white text-sm font-bold flex justify-between items-center">
           <div className="w-1/2 flex items-center gap-x-2">

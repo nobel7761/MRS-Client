@@ -1,9 +1,10 @@
 import CustomContainer from "@/components/shared/Container";
+import Title from "@/components/shared/Title";
 import Image from "next/image";
 
 const TrainingAndDevelopment = () => {
   return (
-    <div className="bg-[#EFECE4] md:py-10">
+    <div className="bg-[#EFECE4] pb-10">
       <CustomContainer>
         <>
           <div className="flex items-center">
@@ -12,14 +13,12 @@ const TrainingAndDevelopment = () => {
               alt="top-section-photo"
               height={1200}
               width={1200}
-              className="w-2/4"
+              className="w-2/4 bg-red-500"
             />
-            <p className="w-2/4 text-7xl font-extrabold">
-              Training & Development
-            </p>
+            <Title text="Training & Development" />
           </div>
 
-          <p className="text-xl mt-5">
+          <p className="text-xl">
             We work for them, arrange training methodology and find out their
             competency and searching suitable job openings for them. Our work is
             to ensure the environment as if they can introduce themselves with

@@ -1,6 +1,7 @@
 import "@/styles/globals.css";
 import { NextPage } from "next";
 import type { AppProps } from "next/app";
+import Head from "next/head";
 import { ReactElement, ReactNode } from "react";
 
 export type NextPageWithLayout = NextPage & {
@@ -13,5 +14,12 @@ type AppPropsWithLayout = AppProps & {
 
 export default function App({ Component, pageProps }: AppPropsWithLayout) {
   const getLayout = Component.getLayout ?? ((page) => page);
-  return <>{getLayout(<Component {...pageProps} />)}</>;
+  return (
+    <>
+      <Head>
+        <link rel="icon" href="/mrs/brand-logo.png" />
+      </Head>
+      {getLayout(<Component {...pageProps} />)}
+    </>
+  );
 }

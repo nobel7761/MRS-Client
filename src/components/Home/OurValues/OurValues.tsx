@@ -1,4 +1,5 @@
 import CustomContainer from "@/components/shared/Container";
+import Title from "@/components/shared/Title";
 import Image from "next/image";
 
 const OurValues = () => {
@@ -14,7 +15,7 @@ const OurValues = () => {
               width={1200}
               className="w-2/3"
             />
-            <p className="w-1/3 text-5xl font-extrabold">Our Values</p>
+            <Title text="Our Values" className="w-1/3" />
           </div>
 
           <p className="text-xl mt-10">
