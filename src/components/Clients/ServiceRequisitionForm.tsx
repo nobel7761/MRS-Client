@@ -136,12 +136,12 @@ const ServiceRequisitionForm = () => {
               /> */}
             </div>
 
-            <FormCheckbox
+            {/* <FormCheckbox
               name="requisition.residence"
               label="Residence Facility"
-            />
+            /> */}
 
-            <FormCheckbox
+            {/* <FormCheckbox
               name="requisition.foodFacility"
               label="Food Facility"
               onChange={handleFoodFacilityChange}
@@ -157,7 +157,7 @@ const ServiceRequisitionForm = () => {
                   { label: "3 times", value: "3 times" },
                 ]}
               />
-            )}
+            )} */}
 
             {/* <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               <FormSelect
