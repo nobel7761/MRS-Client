@@ -2,6 +2,7 @@ import { services } from "@/assets/information";
 import CustomContainer from "@/components/shared/Container";
 import Title from "@/components/shared/Title";
 import Image from "next/image";
+import Link from "next/link";
 import { FaArrowRightLong } from "react-icons/fa6";
 
 const Services = () => {
@@ -43,10 +44,14 @@ const Services = () => {
                 </div>
                 <div className="">
                   <p className="h-14 text-center">{service.description}</p>
-                  <button className="flex justify-center items-center gap-x-2 w-full text-primary hover:text-primary/80">
+                  <Link
+                    href={`/service/${service.id}`}
+                    target="_blank"
+                    className="flex justify-center items-center gap-x-2 w-full text-primary hover:text-primary/80"
+                  >
                     <p className="text-lg">LEARN MORE</p>
                     <FaArrowRightLong className="text-lg" />
-                  </button>
+                  </Link>
                 </div>
               </div>
             ))}
