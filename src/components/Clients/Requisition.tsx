@@ -1,5 +1,6 @@
 import StepperForm from "../shared/Forms/StepperForm";
 import ClientInformationForm from "./ClientInformationForm";
+import ContactPersonInformationForm from "./ContactPersonInformationForm";
 import ServiceRequisitionForm from "./ServiceRequisitionForm";
 
 const ClientRequisitionForm = () => {
@@ -7,6 +8,10 @@ const ClientRequisitionForm = () => {
     {
       title: "Client Information",
       content: <ClientInformationForm />,
+    },
+    {
+      title: "Contact Person Information",
+      content: <ContactPersonInformationForm />,
     },
     {
       title: "Service Requisition",
