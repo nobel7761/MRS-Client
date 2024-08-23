@@ -4,16 +4,18 @@ import React from "react";
 
 const BrandLogo = ({ className }: { className: string }) => {
   return (
-    <div className="flex items-center gap-x-2">
+    <div className="flex items-center">
       <Image
         src="/mrs/brand-logo.png"
         alt="mrs-logo"
         height={2400}
         width={2400}
         // className={className}
-        className="w-[15%] transform hover:scale-125 transition-transform duration-300"
+        className="md:w-[15%] w-[20%]  transform md:hover:scale-125 transition-transform duration-300"
       />
-      <p className={`text-[26px] ${oswald.className} text-white`}>
+      <p
+        className={`md:text-[26px] text-[16px] ${oswald.className} md:text-white`}
+      >
         Manpower Research & Synchronization
       </p>
     </div>

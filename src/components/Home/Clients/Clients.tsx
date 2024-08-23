@@ -50,7 +50,7 @@ const Clients = () => {
     // </div>
 
     <CustomContainer>
-      <div className="md:pb-10">
+      <div className="pb-10">
         <Title text="Our Clients" />
         <p className="text-center text-gray-500">
           We have assisted several private and public organizations in their

@@ -30,22 +30,22 @@ const LeftSide = () => {
         </p>
       </div> */}
 
-      <div className="flex flex-col gap-y-10 h-full ">
+      <div className="flex flex-col md:gap-y-10 gap-y-4 h-full">
         <p
-          className={`text-[2rem] font-semibold bg-gradient-to-r from-[#2664ebfe] via-[#ae06f6fe] to-[#ff0099] bg-clip-text text-transparent`}
+          className={`md:text-[2rem] text-[24px]  md:text-left font-semibold bg-gradient-to-r from-[#2664ebfe] via-[#ae06f6fe] to-[#ff0099] bg-clip-text text-transparent`}
         >
           A Sustainable Business is Humanly Possible When Perfect Employee Works
           in Perfect Company
         </p>
 
-        <p className="text-lg text-black">
+        <p className="md:text-lg text-black">
           We believe meaningful, sustainable employment has the power to change
           the world. Because when you combine talented people with innovative
           companies, you can build a brighter future for everyone.
         </p>
 
         <button
-          className={`bg-primary uppercase md:w-fit md:text-[1.2rem] md:py-4 py-2 px-8 rounded-md md:rounded-[50px] text-white ${space_grotest.className}`}
+          className={`bg-primary uppercase md:w-fit md:text-[1.2rem] md:py-4 py-2 px-8 rounded-md md:rounded-[50px] text-white ${space_grotest.className} hidden md:block`}
           onClick={openModal}
         >
           Be Our Client

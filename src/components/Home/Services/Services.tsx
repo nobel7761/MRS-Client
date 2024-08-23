@@ -10,10 +10,7 @@ const Services = () => {
     <div className="pb-10">
       <CustomContainer>
         <>
-          <Title
-            text="Our Innovative Workforce Solutions"
-            className="text-2xl"
-          />
+          <Title text="Our Innovative Workforce Solutions" />
           <p className="pb-4 text-center">
             We address the complex workforce challenges organizations face
             today, from contingent and permanent staffing to talent management,
@@ -21,7 +18,7 @@ const Services = () => {
             drive your business forward.
           </p>
 
-          <div className="grid grid-cols-3 gap-10">
+          <div className="grid md:grid-cols-3 grid-cols-1 gap-10">
             {services.map((service, index) => (
               <div key={index} className="">
                 <div>

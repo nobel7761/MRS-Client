@@ -1,8 +1,22 @@
+import ClientRequisitionForm from "@/components/Clients/Requisition";
+import Modal from "@/components/shared/Modal";
+import { space_grotest } from "@/fonts";
 import Image from "next/image";
+import { useState } from "react";
 
 const RightSide = () => {
+  const [isModalOpen, setModalOpen] = useState(false);
+
+  const openModal = () => {
+    setModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setModalOpen(false);
+  };
+
   return (
-    <div className="relative w-full overflow-hidden flex gap-x-2">
+    <div className="relative w-full overflow-hidden ">
       {/* <Image
         src="/topSection/bn-img2.jpg"
         alt="top-section-photo"
@@ -26,8 +40,19 @@ const RightSide = () => {
         alt="top-section-photo"
         height={1200}
         width={1200}
-        className="rounded-md w-full "
+        className="rounded-md w-full my-6"
       />
+
+      <button
+        className={`bg-primary w-full uppercase md:w-fit md:text-[1.2rem] md:py-4 py-2 px-8 rounded-md md:rounded-[50px] text-white ${space_grotest.className} block md:hidden`}
+        onClick={openModal}
+      >
+        Be Our Client
+      </button>
+
+      <Modal isOpen={isModalOpen} closeModal={closeModal}>
+        <ClientRequisitionForm />
+      </Modal>
     </div>
   );
 };

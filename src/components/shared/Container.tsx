@@ -1,7 +1,7 @@
 import React, { ReactElement } from "react";
 
 const CustomContainer = ({
-  maxWidth = "max-w-[82.5%]",
+  maxWidth = "md:max-w-[82.5%] max-w-[95%]",
   children,
 }: {
   maxWidth?: string;

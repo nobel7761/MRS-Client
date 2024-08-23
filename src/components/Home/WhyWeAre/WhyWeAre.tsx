@@ -1,16 +1,15 @@
 import CustomContainer from "@/components/shared/Container";
+import Title from "@/components/shared/Title";
 import Image from "next/image";
 
 const WhyWeAre = () => {
   return (
-    <div className="md:py-10">
+    <div className="pb-10">
       <CustomContainer>
         <>
-          <p className="text-center text-5xl font-extrabold pb-10">
-            Why We are ?
-          </p>
-          <div className="flex gap-x-10">
-            <div className="w-1/3 flex flex-col gap-y-5">
+          <Title text="Why We Are?" />
+          <div className="flex md:flex-row md:gap-x-10 flex-col gap-y-5">
+            <div className="md:w-1/3 flex flex-col md:gap-y-5 gap-y-3">
               <Image
                 src="/mrs/whyweare-1.png"
                 alt="top-section-photo"
@@ -23,7 +22,7 @@ const WhyWeAre = () => {
               </p>
             </div>
 
-            <div className="w-1/3 flex flex-col gap-y-5">
+            <div className="md:w-1/3 flex flex-col md:gap-y-5 gap-y-3">
               <Image
                 src="/mrs/whyweare-2.png"
                 alt="top-section-photo"
@@ -36,7 +35,7 @@ const WhyWeAre = () => {
               </p>
             </div>
 
-            <div className="w-1/3 flex flex-col gap-y-5">
+            <div className="md:w-1/3 flex flex-col md:gap-y-5 gap-y-3">
               <Image
                 src="/mrs/whyweare-3.png"
                 alt="top-section-photo"

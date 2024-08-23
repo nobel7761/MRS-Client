@@ -41,7 +41,7 @@ const CounterSection = () => {
                   duration={3}
                   className="md:text-6xl text-4xl font-extrabold"
                 />
-                <p className="md:text-6xl font-extrabold text-sm">K</p>
+                <p className="md:text-6xl font-extrabold text-4xl">K</p>
               </div>
               <FaPlus className="md:text-3xl text-sm" />
             </div>

@@ -9,15 +9,14 @@ import BottomSection from "./BottomSection";
 const TopSection = () => {
   return (
     <div className="bg-backgroundColor">
-      {/* <TopCover height="min-h-[120vh]" imageUrl="/banner-background.jpg"> */}
       <CustomContainer>
         <>
-          <div className="flex gap-x-10 mt-10">
-            <div className={`w-[50%]`}>
+          <div className="md:flex gap-x-10 md:mt-10">
+            <div className={`md:w-[50%]`}>
               <LeftSide />
             </div>
 
-            <div className={`w-[50%]`}>
+            <div className={`md:w-[50%]`}>
               <RightSide />
               {/* <Swiper
                   effect={"cards"}

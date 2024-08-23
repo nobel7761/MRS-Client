@@ -6,7 +6,6 @@ const Quote = () => {
   return (
     <div className=" overflow-hidden">
       <div
-        //   className="bg-[url('/quote-background.jpg')] h-[450px] bg-center mix-blend-overlay"
         className={`bg-cover bg-center`}
         style={{
           backgroundImage: `url(/quote-background.jpg)`,
@@ -22,10 +21,10 @@ const Quote = () => {
                 alt="comma"
                 height={800}
                 width={800}
-                className="w-[80px]"
+                className="md:w-[80px] w-[20px]"
               />
               <p
-                className={`text-center text-[1.5rem] text-white font-extrabold ${bona_nova.className}`}
+                className={`text-center md:text-[1.5rem] text-white font-extrabold hidden md:block ${bona_nova.className}`}
               >
                 Rivers do not drink their own water, trees do not eat their own
                 fruit.
@@ -37,13 +36,24 @@ const Quote = () => {
                 Life is good when you are happy, but much better when others are
                 happy because of you.
               </p>
+
+              <p
+                className={`w-[85%] mx-auto text-center text-white font-extrabold block md:hidden ${bona_nova.className}`}
+              >
+                Rivers do not drink their own water, trees do not eat their own
+                fruit. Sun does not shine on itself and flowers do not spread
+                their fragrance for themselves. Living for others is a rule of
+                nature. We are all born to help each other. No matter how
+                difficult it is. Life is good when you are happy, but much
+                better when others are happy because of you.
+              </p>
               <div className="flex justify-end">
                 <Image
                   src="/5.png"
                   alt="comma1"
                   height={800}
                   width={800}
-                  className="w-[80px]"
+                  className="md:w-[80px] w-[20px]"
                 />
               </div>
             </div>
