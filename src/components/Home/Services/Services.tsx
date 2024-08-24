@@ -40,7 +40,7 @@ const Services = () => {
                   />
                 </div>
                 <div className="">
-                  <p className="h-14 text-center">{service.description}</p>
+                  <p className="h-14 text-center">{service.title}</p>
                   <Link
                     href={`/service/${service.id}`}
                     target="_blank"
