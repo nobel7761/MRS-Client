@@ -4,7 +4,7 @@ import FormInput from "../shared/Forms/FormInput";
 import FormInputGroup from "../shared/Forms/FormInputGroup";
 import FormSelect from "../shared/Forms/FormSelect";
 import FormTextArea from "../shared/Forms/FormTextArea";
-import CustomAlert from "../shared/Alert";
+import CustomDeleteAlert from "../shared/Alert";
 import { FaTrashAlt } from "react-icons/fa";
 import FormCheckbox from "../shared/Forms/FormCheckbox";
 
@@ -17,7 +17,7 @@ const ServiceRequisitionForm = () => {
   };
 
   const confirmRemoveRequisition = (id: number) => {
-    CustomAlert({
+    CustomDeleteAlert({
       onConfirm: () => removeRequisition(id),
       onCancel: () => console.log("Deletion cancelled"),
     });

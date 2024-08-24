@@ -6,7 +6,7 @@ interface CustomAlertProps {
   onCancel: () => void;
 }
 
-const CustomAlert = ({ onConfirm, onCancel }: CustomAlertProps) => {
+const CustomDeleteAlert = ({ onConfirm, onCancel }: CustomAlertProps) => {
   return swal({
     title: "Are you sure to delete?",
     icon: "warning",
@@ -35,4 +35,4 @@ const CustomAlert = ({ onConfirm, onCancel }: CustomAlertProps) => {
   });
 };
 
-export default CustomAlert;
+export default CustomDeleteAlert;

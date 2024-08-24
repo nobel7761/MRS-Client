@@ -2,20 +2,45 @@ import { benefits } from "@/assets/information";
 import TopCover from "../shared/TopCover.component";
 import CustomContainer from "../shared/Container";
 import { open_sans } from "@/fonts";
-import React from "react";
+import React, { useState } from "react";
 import { FormProvider, useForm } from "react-hook-form";
 import FormInput from "../shared/Forms/FormInput";
 import FormTextArea from "../shared/Forms/FormTextArea";
+import swal from "sweetalert";
+import LoadingIcon from "../shared/LoadingIcon";
+import CustomSuccessAlert from "../shared/CustomSuccessAlert";
 
 const AboutPageComponent = () => {
   const methods = useForm();
   const { handleSubmit, reset } = methods;
+  const [isLoading, setIsLoading] = useState(false);
 
-  const handleStudentOnSubmit = (data: any) => {
+  const handleStudentOnSubmit = async (data: any) => {
+    try {
+      setIsLoading(true);
+      const response = await fetch("/api/about", {
+        method: "POST",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
+
+      reset();
+      CustomSuccessAlert({
+        onCancel: () => console.log("Deletion cancelled"),
+      });
+    } catch (error) {
+      swal("Failed to Submit", "error");
+    } finally {
+      setIsLoading(false); // Set loading state back to false
+    }
+
     reset({
       name: "",
       email: "",
-      phone_number: "",
+      phone: "",
       message: "",
     });
   };
@@ -132,7 +157,7 @@ const AboutPageComponent = () => {
                   />
                   <FormInput
                     type="number"
-                    name="phone_number"
+                    name="phone"
                     size="large"
                     placeholder="Phone Number"
                     validation={{
@@ -151,9 +176,12 @@ const AboutPageComponent = () => {
 
                   <button
                     type="submit"
-                    className="bg-primary text-white w-full py-2 text-xl rounded"
+                    disabled={isLoading}
+                    className={`bg-primary text-white w-full py-2 text-xl rounded flex  justify-center items-center gap-x-4 ${
+                      isLoading ? "cursor-not-allowed bg-primary/80" : null
+                    }`}
                   >
-                    SEND
+                    {isLoading && <LoadingIcon />} SEND
                   </button>
                 </form>
               </FormProvider>

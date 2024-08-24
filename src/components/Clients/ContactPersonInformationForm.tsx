@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import FormInput from "../shared/Forms/FormInput";
 import { FaTrashAlt } from "react-icons/fa";
-import CustomAlert from "../shared/Alert";
+import CustomDeleteAlert from "../shared/Alert";
 
 const ContactPersonInformationForm = () => {
   const [contactPersons, setContactPersons] = useState([{ id: Date.now() }]);
@@ -13,7 +13,7 @@ const ContactPersonInformationForm = () => {
   };
 
   const confirmRemoveContactPerson = (id: number) => {
-    CustomAlert({
+    CustomDeleteAlert({
       onConfirm: () => removeContactPerson(id),
       onCancel: () => console.log("Deletion cancelled"),
     });
