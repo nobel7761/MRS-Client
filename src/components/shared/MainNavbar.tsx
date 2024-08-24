@@ -21,7 +21,7 @@ const MainNavbar = () => {
 
   return (
     <nav className="relative z-10">
-      <div className="md:max-w-[82.5%] mx-auto md:px-6 p-1 md:py-5 md:bg-primary md:rounded-full overflow-hidden flex justify-between items-center gap-x-1 md:border-0 border-b border-black md:mb-0 mb-5">
+      <div className="md:max-w-[82.5%] mx-auto md:px-6 p-1 md:py-5 md:bg-primary md:rounded-full overflow-hidden flex justify-between items-center gap-x-1 md:border-0 border-b border-black md:mb-0">
         <Link href="/" className="md:w-[55%]">
           <BrandLogo className="" />
         </Link>

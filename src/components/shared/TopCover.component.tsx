@@ -92,7 +92,7 @@ const TopCover = ({
 
   return (
     <div
-      className={`bg-cover bg-center -mt-[12.5rem] pt-60 ${height}`}
+      className={`bg-cover bg-center -mt-[12.5rem] md:pt-60 pt-48 ${height}`}
       style={{
         backgroundSize: "cover",
         backgroundImage: `url(${imageUrl})`,
@@ -106,7 +106,7 @@ const TopCover = ({
             variants={headingVariants}
             initial="hidden"
             animate={inView ? "visible" : "hidden"}
-            className={`text-center text-8xl font-bold pb-10 ${space_grotest.className}`}
+            className={`text-center md:text-8xl text-6xl font-bold pb-10 ${space_grotest.className}`}
           >
             {title}
           </motion.p>

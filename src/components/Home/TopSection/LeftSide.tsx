@@ -32,7 +32,7 @@ const LeftSide = () => {
 
       <div className="flex flex-col md:gap-y-10 gap-y-4 h-full">
         <p
-          className={`md:text-[2rem] text-[24px]  md:text-left font-semibold bg-gradient-to-r from-[#2664ebfe] via-[#ae06f6fe] to-[#ff0099] bg-clip-text text-transparent`}
+          className={`md:text-[2rem] text-[24px]  md:text-left font-semibold bg-gradient-to-r from-[#2664ebfe] via-[#ae06f6fe] to-[#ff0099] bg-clip-text text-transparent md:mt-0 mt-5`}
         >
           A Sustainable Business is Humanly Possible When Perfect Employee Works
           in Perfect Company

@@ -50,7 +50,7 @@ const TeamMemberCard = ({
           width={1200}
           src={member.source}
           alt={`Photo of ${member.name}`}
-          className={`h-[60vh] 
+          className={`md:h-[60vh] h-[55vh] 
             ${
               (member.name.includes("Hira") ||
                 member.name.includes("Laboni")) &&
@@ -121,13 +121,13 @@ const TeamPageComponent = () => {
     <div>
       <TopCover imageUrl="/breadcrumb-background.jpg" title="Team" />
 
-      <section className="bg-[#060628] text-white py-16">
-        <div className="container mx-auto text-center">
+      <section className="bg-[#060628] text-white md:py-16 py-8">
+        <div className="md:container mx-auto text-center">
           <motion.h2
             variants={headingVariants}
             initial="hidden"
             animate={inView ? "visible" : "hidden"}
-            className="text-4xl font-bold mb-8"
+            className="md:text-4xl text-2xl font-bold mb-8"
           >
             Partnered with most of the <br />
             <span className="text-blue-400">top people at each industry</span>
@@ -151,6 +151,16 @@ const TeamPageComponent = () => {
                 }}
                 modules={[Autoplay]}
                 allowTouchMove
+                breakpoints={{
+                  // when window width is >= 320px (mobile)
+                  320: {
+                    slidesPerView: 1,
+                  },
+                  // when window width is >= 768px (tablet and above)
+                  768: {
+                    slidesPerView: 3,
+                  },
+                }}
               >
                 {teamMembers.map((member, index) => (
                   <SwiperSlide key={index}>

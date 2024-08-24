@@ -24,23 +24,26 @@ const AboutPageComponent = () => {
     <div>
       <TopCover imageUrl="/breadcrumb-background.jpg" title="About" />
 
-      <div className={`bg-[#F8F8F8] py-20`}>
+      <div className={`bg-[#F8F8F8] md:py-20 py-8`}>
         <CustomContainer>
-          <div className="flex">
+          <div className="flex md:flex-row flex-col">
             <div
-              className={`text-7xl font-bold w-1/2 text-right ${open_sans.className}`}
+              className={`md:text-7xl text-4xl font-bold md:w-1/2 md:text-right text-center ${open_sans.className}`}
             >
-              <p className="text-primary">WHO</p>
-              <p>WE</p>
-              <p>
+              <p className="text-primary hidden md:block">WHO</p>
+              <p className="hidden md:block">WE</p>
+              <p className="hidden md:block">
                 ARE<span className="text-primary">?</span>
               </p>
+              <p className="block md:hidden">
+                WHO WE ARE<span className="text-primary"> ?</span>
+              </p>
             </div>
-            <div className="flex justify-center items-center mx-12">
+            <div className="md:flex justify-center items-center mx-12 hidden ">
               <p className="w-[2px] h-[80%] bg-primary"></p>
             </div>
-            <div className="w-1/2 py-2 flex flex-col gap-y-8">
-              <p className="text-justify">
+            <div className="md:w-1/2 py-2 flex flex-col gap-y-8">
+              <p className="text-justify text-sm md:text-base">
                 Manpower Research and Synchronization began its operation in
                 2021. At present, its primary service area is in Dhaka,
                 Bangladesh and after completing some mission, it will serve the
@@ -60,21 +63,25 @@ const AboutPageComponent = () => {
       </div>
 
       <CustomContainer>
-        <div className="pb-20 w-5/6 mx-auto">
-          <p className={`${open_sans.className} text-center py-16 text-4xl`}>
+        <div className="md:pb-20 md:py-0 py-10 md:w-5/6 mx-auto">
+          <p
+            className={`${open_sans.className} text-center  md:py-16 pb-10 text-2xl md:text-4xl`}
+          >
             BENEFITS OF WORKING WITH <br />
             <span className="text-primary">
               MANPOWER RESEARCH & SYNCHRONIZATION
             </span>
           </p>
-          <div className="grid grid-cols-2 gap-14">
+          <div className="grid md:grid-cols-2 grid-cols-1 gap-14">
             {benefits.map((benefit, index) => (
               <div key={index} className="">
-                <div className="h-32 w-32 border-[4px] border-primary flex justify-center items-center rounded-full text-primary text-7xl">
-                  {React.createElement(benefit.icon)}
+                <div className="flex justify-center md:justify-start">
+                  <div className="h-32 w-32 border-[4px] border-primary flex justify-center items-center rounded-full text-primary text-7xl">
+                    {React.createElement(benefit.icon)}
+                  </div>
                 </div>
                 <h3
-                  className={`py-5 text-2xl text-primary ${open_sans.className}`}
+                  className={`py-5 text-2xl text-primary md:text-start text-center ${open_sans.className}`}
                 >
                   {benefit.title}
                 </h3>
@@ -85,20 +92,22 @@ const AboutPageComponent = () => {
         </div>
       </CustomContainer>
 
-      <div className="bg-[#F8F8F8] py-20">
+      <div className="bg-[#F8F8F8] md:py-20 py-10">
         <CustomContainer>
-          <div className="flex">
-            <p className={`${open_sans.className} text-7xl w-1/2 text-right`}>
+          <div className="flex md:flex-row flex-col">
+            <p
+              className={`${open_sans.className} md:text-7xl md:w-1/2 pb-10 md:pb-0 md:text-right text-center text-4xl`}
+            >
               WANT US
               <br />
               TO <span className="text-primary">CALL</span>
               <br />
               YOU?
             </p>
-            <div className="flex justify-center items-center mx-12">
+            <div className="hidden md:flex justify-center items-center mx-12">
               <p className="w-[4px] h-[80%] bg-primary"></p>
             </div>
-            <div className="w-1/2">
+            <div className="md:w-1/2">
               <FormProvider {...methods}>
                 <form onSubmit={handleSubmit(handleStudentOnSubmit)}>
                   <FormInput

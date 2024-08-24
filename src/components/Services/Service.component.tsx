@@ -12,25 +12,29 @@ const ServiceComponent = () => {
         {services.map((service, index) => (
           <div
             key={index}
-            className={index % 2 === 0 ? "flex" : "flex flex-row-reverse"}
+            className={
+              index % 2 === 0
+                ? "flex md:flex-row flex-col"
+                : "flex md:flex-row-reverse flex-col"
+            }
           >
-            <Link href={`service/${service.id}`} className="w-1/2">
+            <Link href={`service/${service.id}`} className="md:w-1/2">
               <Image
                 src={service.image}
                 alt={service.description}
                 height={2400}
                 width={2400}
-                className="w-full h-[35rem] object-cover mix-blend-overlay"
+                className="w-full md:h-[35rem] h-[25rem] object-cover mix-blend-overlay"
               />
             </Link>
-            <div className="w-1/2 flex flex-col px-10">
+            <div className="md:w-1/2 flex flex-col md:px-10 px-4">
               <Link
                 href={`service/${service.id}`}
-                className="font-extrabold text-3xl my-10 hover:text-primary"
+                className="font-extrabold md:text-3xl text-xl md:my-10 my-4 hover:text-primary"
               >
-                {service.description}
+                {service.title}
               </Link>
-              <p>
+              <p className="md:mb-0 mb-8">
                 {service.description.length > 1000 ? (
                   <>
                     {service.description.substring(0, 1000)}...

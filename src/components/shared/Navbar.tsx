@@ -10,7 +10,13 @@ import { useRouter } from "next/router";
 const Navbar = () => {
   const { pathname } = useRouter();
   return (
-    <div className={`${pathname === "/" && "bg-backgroundColor"} md:pt-8 z-10`}>
+    <div
+      className={`${
+        pathname === "/"
+          ? "bg-backgroundColor"
+          : "md:bg-transparent bg-backgroundColor"
+      } md:pt-8 z-10`}
+    >
       <div className="md:w-[65%] w-full mx-auto py-2 px-2 md:pl-10 md:rounded-tl-full md:rounded-tr-full overflow-hidden bg-[#041E42]">
         <div className="text-white text-sm font-bold flex justify-between items-center">
           <div className="md:w-1/2 flex items-center gap-x-2">
