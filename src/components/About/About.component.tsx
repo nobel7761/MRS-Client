@@ -96,13 +96,20 @@ const AboutPageComponent = () => {
         <CustomContainer>
           <div className="flex md:flex-row flex-col">
             <p
-              className={`${open_sans.className} md:text-7xl md:w-1/2 pb-10 md:pb-0 md:text-right text-center text-4xl`}
+              className={`${open_sans.className} text-7xl w-1/2 text-right hidden md:block`}
             >
               WANT US
               <br />
               TO <span className="text-primary">CALL</span>
               <br />
               YOU?
+            </p>
+
+            <p
+              className={`${open_sans.className} md:hidden block text-4xl pb-10 text-center `}
+            >
+              WANT US TO <br />
+              <span className="text-primary">CALL</span> YOU?
             </p>
             <div className="hidden md:flex justify-center items-center mx-12">
               <p className="w-[4px] h-[80%] bg-primary"></p>

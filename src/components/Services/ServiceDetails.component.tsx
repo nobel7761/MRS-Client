@@ -9,6 +9,7 @@ interface ISingleService {
   id: number;
   image: string;
   logo: string;
+  title: string;
   description: string;
 }
 
@@ -39,16 +40,20 @@ const ServiceDetailsComponent = () => {
       <CustomContainer>
         <>
           {singleService && (
-            <div className="flex flex-col gap-y-10 py-10">
+            <div className="flex flex-col md:gap-y-10 gap-y-4 md:py-10 pb-10">
               <Image
                 src={singleService?.logo}
                 alt={singleService?.description}
                 height={2400}
                 width={2400}
-                className="w-2/4 mx-auto"
+                className="md:w-2/4 mx-auto"
               />
-              <h1 className="text-center font-extrabold text-5xl">{}</h1>
-              <p>{singleService?.description}</p>
+              <h1 className="text-center md:font-extrabold font-semibold md:text-5xl text-2xl">
+                {singleService.title}
+              </h1>
+              <p className="md:text-left text-justify md:text-base text-sm">
+                {singleService?.description}
+              </p>
             </div>
           )}
         </>
