@@ -17,28 +17,10 @@ const LeftSide = () => {
 
   return (
     <div className="text-white h-full overflow-hidden">
-      {/* <div
-        className={`flex gap-x-5 text-5xl font-bold uppercase text-neon-orange mb-20 ${neon_font.className}`}
-      >
-        FIND YOUR{" "}
-        <p className={`text-neon-blue ${neon_font.className}`}>
-          <Typical
-            steps={["JOB!", 1000, "MANPOWER!", 1000]}
-            loop={Infinity}
-            wrapper="b"
-          />
-        </p>
-      </div> */}
-
-      <div className="flex flex-col md:gap-y-10 gap-y-4 h-full">
+      <div className="flex flex-col md:gap-y-10 gap-y-4 h-full justify-center">
         <p
-          className={`md:text-[2rem] text-[24px]  md:text-left font-semibold bg-gradient-to-r from-[#2664ebfe] via-[#ae06f6fe] to-[#ff0099] bg-clip-text text-transparent md:mt-0 mt-5`}
+          className={`md:text-3xl text-xl text-black font-semibold mt-5 ${space_grotest.className}`}
         >
-          A Sustainable Business is Humanly Possible When Perfect Employee Works
-          in Perfect Company
-        </p>
-
-        <p className="md:text-lg text-black">
           We believe meaningful, sustainable employment has the power to change
           the world. Because when you combine talented people with innovative
           companies, you can build a brighter future for everyone.

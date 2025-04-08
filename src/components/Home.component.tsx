@@ -20,7 +20,7 @@ const HomeComponent = () => {
       <CounterSection />
       {/* <Intro /> */}
       <OurValues />
-      <Quote />
+      {/* <Quote /> */}
       <Clients />
       <TrainingAndDevelopment />
       <WhyWeAre />
