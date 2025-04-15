@@ -1,4 +1,5 @@
 import {
+  Archivo,
   Bona_Nova,
   Inter,
   Noto_Sans,
@@ -15,3 +16,4 @@ export const neon_font = Tilt_Neon({ weight: ["400"], subsets: ["latin"] });
 export const bona_nova = Bona_Nova({ weight: ["400"], subsets: ["latin"] });
 export const open_sans = Open_Sans({ weight: ["700"], subsets: ["latin"] });
 export const oswald = Oswald({ weight: "700", subsets: ["latin"] });
+export const archivo = Archivo({ weight: "700", subsets: ["latin"] });

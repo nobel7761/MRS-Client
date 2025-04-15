@@ -21,7 +21,11 @@ const MainNavbar = () => {
 
   return (
     <nav className="relative z-10">
-      <div className="md:max-w-[82.5%] mx-auto md:px-6 p-1 md:py-5 md:bg-primary md:rounded-full overflow-hidden flex justify-between items-center gap-x-1 md:border-0 border-b border-black md:mb-0">
+      <div
+        className={`md:max-w-[82.5%] mx-auto md:px-6 p-1 md:py-5 ${
+          activeRoute !== "/" ? "md:bg-[#FDF8DE]" : ""
+        } md:rounded-full overflow-hidden flex justify-between items-center gap-x-1 md:border md:border-gray-600 border-b border-black md:mb-0`}
+      >
         <Link href="/" className="md:w-[55%]">
           <BrandLogo className="" />
         </Link>
@@ -48,10 +52,10 @@ const MainNavbar = () => {
                 onClick={toggleMobileMenu}
                 className={`${
                   space_grotest.className
-                } md:p-0 p-4 rounded-lg hover:text-white ${
+                } md:p-0 p-4 rounded-lg hover:text-[#67BC46] ${
                   activeRoute === item.route
-                    ? "text-white md:font-extrabold md:text-xl bg-primary "
-                    : "text-white md:font-extralight text-base hover:bg-gray-700 md:hover:bg-transparent"
+                    ? "text-[#67BC46] md:font-extrabold md:text-xl"
+                    : "md:font-extralight text-base hover:bg-gray-700 md:hover:bg-transparent"
                 }`}
               >
                 {item.label}

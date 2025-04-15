@@ -1,3 +1,4 @@
+import { archivo } from "@/fonts";
 import StepperForm from "../shared/Forms/StepperForm";
 import ClientInformationForm from "./ClientInformationForm";
 import ContactPersonInformationForm from "./ContactPersonInformationForm";
@@ -29,8 +30,10 @@ const ClientRequisitionForm = () => {
 
   return (
     <div>
-      <h1 className="flex justify-center uppercase font-extrabold text-primary text-3xl">
-        Be Our Precious Client
+      <h1
+        className={`flex justify-center uppercase font-extrabold text-primary text-3xl ${archivo.className}`}
+      >
+        Start Hiring Reliable Staff Today
       </h1>
       <StepperForm
         submitHandler={(value) => handleStudentSubmit(value)}

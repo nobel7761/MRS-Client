@@ -53,9 +53,9 @@ const Clients = () => {
       <div className="pb-10">
         <Title text="Our Clients" />
         <p className="text-center text-gray-500">
-          We have assisted several private and public organizations in their
-          pursuit of quality individuals to join their work force. Here are some
-          of the organizations Manpower Services has been privileged to serve:{" "}
+          We proudly serve some of the top hotels, hospitals, cafes, and
+          corporate offices in Bangladesh. These organizations trust us to
+          supply skilled, dependable support staff — and we deliver.
         </p>
 
         <div className="flex gap-x-10 mt-10">

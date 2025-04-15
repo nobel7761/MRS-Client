@@ -7,7 +7,7 @@ const WhyWeAre = () => {
     <div className="pb-10">
       <CustomContainer>
         <>
-          <Title text="Why We Are?" />
+          <Title text="What Drives Us?" />
           <div className="flex md:flex-row md:gap-x-10 flex-col gap-y-5">
             <div className="md:w-1/3 flex flex-col md:gap-y-5 gap-y-3">
               <Image
@@ -18,7 +18,7 @@ const WhyWeAre = () => {
                 className="w-full h-[250px]"
               />
               <p className="text-center text-xl font-bold">
-                Discover work opportunity for people
+                Creating Work Opportunities for All
               </p>
             </div>
 
@@ -31,7 +31,7 @@ const WhyWeAre = () => {
                 className="w-full h-[250px]"
               />
               <p className="text-center text-xl font-bold">
-                Unfold manpower as business resource
+                Transforming People into Business Assets
               </p>
             </div>
 
@@ -44,7 +44,7 @@ const WhyWeAre = () => {
                 className="w-full h-[250px]"
               />
               <p className="text-center text-xl font-bold">
-                Sustainable work force
+                Building a Reliable, Sustainable Workforce
               </p>
             </div>
           </div>

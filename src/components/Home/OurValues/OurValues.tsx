@@ -1,33 +1,49 @@
 import CustomContainer from "@/components/shared/Container";
 import Title from "@/components/shared/Title";
+import { archivo } from "@/fonts";
 import Image from "next/image";
 
 const OurValues = () => {
   return (
-    <div className="bg-backgroundColor md:py-10 pb-10">
+    <div className="bg-backgroundColor pb-10">
       <CustomContainer>
-        <div className="">
-          <div className="md:flex md:flex-row md:justify-center md:items-center">
+        <>
+          <Title
+            text="Our Values"
+            className="md:w-1/3 mx-auto hidden md:block"
+          />
+          <div className="">
             <Title text="Our Values" className="w-full block md:hidden" />
-            <Image
-              src="/mrs/our-values.png"
-              alt="top-section-photo"
-              height={1200}
-              width={1200}
-              className="md:w-2/3 w-full "
-            />
-            <Title text="Our Values" className="md:w-1/3 hidden md:block" />
-          </div>
+            <div className="md:flex md:flex-row md:justify-between md:items-center md:gap-8">
+              <div className="md:w-1/2 w-full">
+                <Image
+                  src="/mrs/our-values.png"
+                  alt="top-section-photo"
+                  height={1200}
+                  width={1200}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="md:w-1/2 w-full flex flex-col gap-y-8">
+                <p className={`text-3xl font-bold`}>
+                  We believe that every person has potential — but not everyone
+                  gets the opportunity to show it.
+                </p>
+                <p className="md:text-2xl mt-10 md:mt-0">
+                  At Manpower Research & Synchronization, we find
+                  underprivileged but capable individuals, help them break
+                  through barriers, and prepare them to thrive in workplaces
+                  that need them most.
+                </p>
 
-          <p className="md:text-xl mt-10">
-            We believe that each and every human is blessed with great power in
-            the earth. But all of them always cannot put their real strengths on
-            work efficiently and effectively. So they fail to reach to the
-            success. We search such unprivileged people and find their bindings
-            and impediment for what they could not introduce their real strength
-            on work
-          </p>
-        </div>
+                <p className="md:text-2xl">
+                  Because when the right person is given the right opportunity,
+                  everyone wins — the worker, the company, and the community.
+                </p>
+              </div>
+            </div>
+          </div>
+        </>
       </CustomContainer>
     </div>
   );

@@ -7,24 +7,37 @@ const TrainingAndDevelopment = () => {
     <div className="bg-[#EFECE4] pb-10">
       <CustomContainer>
         <>
-          <div className="flex flex-col-reverse md:flex-row md:items-center">
-            <Image
-              src="/mrs/TrainingAndDevelopment.png"
-              alt="top-section-photo"
-              height={1200}
-              width={1200}
-              className="md:w-2/4"
-            />
-            <Title text="Training & Development" />
-          </div>
+          <Title text="Training & Development" />
 
-          <p className="md:text-xl">
-            We work for them, arrange training methodology and find out their
-            competency and searching suitable job openings for them. Our work is
-            to ensure the environment as if they can introduce themselves with
-            own strengths to perform better and create values for the business
-            as well as our society.
-          </p>
+          <div className="flex flex-col md:flex-row gap-8">
+            <div className="md:w-1/2 space-y-8">
+              <p className="text-4xl font-bold">
+                We train people. We unlock potential.
+              </p>
+              <p className="text-2xl">
+                Before placing any worker, we assess their skills, provide
+                targeted training, and ensure they&apos;re ready to deliver.
+              </p>
+              <p className="text-2xl">
+                Whether it&apos;s for hospitality, hospitals, or offices — we
+                prepare candidates to meet industry standards with confidence.
+              </p>
+              <p className="md:text-2xl">
+                Our goal is to empower individuals to perform at their best —
+                creating real value for your business and our society.
+              </p>
+            </div>
+
+            <div className="md:w-1/2">
+              <Image
+                src="/mrs/TrainingAndDevelopment.png"
+                alt="top-section-photo"
+                height={1200}
+                width={1200}
+                className="w-full"
+              />
+            </div>
+          </div>
         </>
       </CustomContainer>
     </div>

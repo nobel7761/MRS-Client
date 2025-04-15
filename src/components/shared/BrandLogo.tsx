@@ -10,11 +10,9 @@ const BrandLogo = ({ className }: { className: string }) => {
         alt="mrs-logo"
         height={2400}
         width={2400}
-        className="md:w-[15%] w-[20%]  transform md:hover:scale-125 transition-transform duration-300"
+        className="md:w-[15%] w-[20%] transform md:hover:scale-125 transition-transform duration-300"
       />
-      <p
-        className={`md:text-[26px] text-[16px] ${oswald.className} md:text-white`}
-      >
+      <p className={`md:text-[26px] text-[16px] ${oswald.className}`}>
         Manpower Research & Synchronization
       </p>
     </div>
